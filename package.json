@@ -9,8 +9,10 @@
     "start": "node __sapper__/build"
   },
   "dependencies": {
+    "@jackfranklin/rollup-plugin-markdown": "^0.2.0",
     "compression": "^1.7.1",
     "polka": "next",
+    "rollup-plugin-glob": "^1.0.2",
     "sirv": "^1.0.0"
   },
   "devDependencies": {
