@@ -18,9 +18,14 @@
 </svelte:head>
 
 {#each posts as post}
-	<!-- we're using the non-standard `rel=prefetch` attribute to
-			tell Sapper to load the data for the page as soon as
-			the user hovers over the link or taps it, instead of
-			waiting for the 'click' event -->
-	<h2><a rel="prefetch" href="/{post.slug}">{post.title}</a></h2>
+<article class="post">
+	<!-- `rel=prefetch` attribute tells Sapper to load the data
+				for the page as soon as the user hovers over the link
+				or taps it, instead of waiting for the 'click' event -->
+	<h2 class="post_title">
+		<a rel="prefetch" href="/{post.slug}">{post.title}</a>
+	</h2>
+	<p class="date">{post.date}</p>
+	<p class="summary">{post.summary}</p>
+</article>
 {/each}

@@ -10,16 +10,45 @@ body {
   color: #333;
 }
 
+.container {
+  width: 90%;
+  max-width: 700px;
+  margin: 2rem auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem !important;
+}
+
+h1 {
+  margin: 0 1rem 0 0;
+  font: bold 2rem/1 "Andika New Basic", sans-serif;
+}
+
+h1 a {
+  text-decoration: none;
+}
+
+header p {
+  font: normal 1.25rem/1 "Andika New Basic", sans-serif;
+  margin: 0;
+}
+
 a {
   color: inherit;
 }
 
-h2 {
-  border: 1px solid red;
+.post_title,
+.post_title a {
+  text-decoration: none;
+  font: bold 1.75rem/1 "Andika New Basic", sans-serif;
 }
 
 code {
-  font-family: menlo, inconsolata, monospace;
+  font-family: "JetBrains Mono", monospace;
   font-size: calc(1em - 2px);
   color: #555;
   background-color: #f0f0f0;
@@ -27,8 +56,34 @@ code {
   border-radius: 2px;
 }
 
+.post {
+  margin: 2rem 0;
+}
+
 @media (min-width: 400px) {
   body {
     font-size: 16px;
   }
+}
+
+p,
+li {
+  font: normal 1.15rem/1.5 "Andika New Basic", sans-serif;
+  color: #343434;
+  margin: 1rem 0;
+}
+
+li {
+  margin: 0.5rem 0 0.5rem 2.5rem;
+}
+
+.date {
+  font-size: 1rem;
+  font-family: "JetBrains Mono", monospace;
+  margin: 0.25rem 0;
+  color: #777;
+}
+
+.summary {
+  margin: 0.25rem 0;
 }

@@ -1,8 +1,10 @@
 ---
 title: Social meta tags in Gatsby with React Helmet
-summary: A short post about ...
+summary: "A short post about ..."
 date: 2020-12-20
 ---
+
+here is content
 
 - this
 - is

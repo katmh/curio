@@ -20,9 +20,7 @@
 	     for the current page. CSS for the rest of the app is
 	     lazily loaded when it precaches secondary pages -->
     %sapper.styles%
-
-    <!-- This contains the contents of the <svelte:head> component, if
-	     the current page has one -->
+    
     %sapper.head%
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -32,8 +30,6 @@
     />
   </head>
   <body>
-    <!-- The application will be rendered inside this element,
-	     because `src/client.js` references it -->
     <div id="sapper">%sapper.html%</div>
   </body>
 </html>

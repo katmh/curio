@@ -1,13 +1,9 @@
 <script context="module">
-	// import the logic for finding a post based on permalink
   import {findPost} from './_posts'
-
   // sapper calls this to load our data
   export function preload({ params }) {
-		// the `slug` parameter is available because
-		// this file is called [slug].svelte
+		// `slug` parameter available b/c this file is [slug].svelte
     const post = findPost(params.slug)
-
     // return a list of props
     return { post }
   }
@@ -27,29 +23,16 @@
 		all elements inside .content
 	*/
 	.content :global(h2) {
-		font-size: 1.4em;
-		font-weight: 500;
+		font: bold 1.4rem/1 "Andika New Basic", sans-serif;
+		margin-top: 2rem;
+		color: #222;
 	}
 
-	.content :global(pre) {
-		background-color: #f9f9f9;
-		box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.05);
-		padding: 0.5em;
-		border-radius: 2px;
-		overflow-x: auto;
-	}
-
-	.content :global(pre) :global(code) {
-		background-color: transparent;
-		padding: 0;
-	}
-
-	.content :global(ul) {
-		line-height: 1.5;
-	}
-
-	.content :global(li) {
-		margin: 0 0 0.5em 0;
+	.content :global(pre code) {
+		display: block;
+  	font: normal 0.9rem/150% "Inconsolata", Monaco, monospace;
+		overflow-x: scroll;
+		padding: .75rem 1rem;
 	}
 </style>
 
@@ -57,8 +40,8 @@
 	<title>{post.title}</title>
 </svelte:head>
 
-<h1>{post.title}</h1>
-
+<h1 class="post_title">{post.title}</h1>
+<p class="date">{post.date}</p>
 <div class="content">
 	{@html post.html}
 </div>
