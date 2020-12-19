@@ -1,16 +1,16 @@
 <script context="module">
-	export async function preload({ params }) {
+	// import the logic for finding a post based on permalink
+  import {findPost} from './_posts'
+
+  // sapper calls this to load our data
+  export function preload({ params }) {
 		// the `slug` parameter is available because
 		// this file is called [slug].svelte
-		const res = await this.fetch(`blog/${params.slug}.json`);
-		const data = await res.json();
+    const post = findPost(params.slug)
 
-		if (res.status === 200) {
-			return { post: data };
-		} else {
-			this.error(res.status, data.message);
-		}
-	}
+    // return a list of props
+    return { post }
+  }
 </script>
 
 <script>
