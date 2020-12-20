@@ -1,6 +1,6 @@
 ---
 title: "Edit a Gatsby site from a spreadsheet"
-summary: "Frictionless to update, thanks to Gatsby, Sheety API, Google Sheets, and Zapier."
+summary: "Frictionless to update, thanks to Gatsby, Sheety API, Google Sheets, and Zapier"
 date: 2019-12-30
 ---
 
