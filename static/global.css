@@ -87,6 +87,15 @@ li {
   margin: 0.25rem 0;
 }
 
+.about {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+footer {
+  border-top: 1px solid #aaa;
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     color: #ddd;
@@ -95,7 +104,8 @@ li {
   p {
     color: #ddd;
   }
-  .date {
+  .date,
+  .about {
     color: #aaa;
   }
   p code,
@@ -113,8 +123,4 @@ li {
   h3 {
     color: #eee;
   }
-}
-
-.about {
-  font-size: 0.9rem;
 }
