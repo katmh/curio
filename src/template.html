@@ -19,15 +19,22 @@
     <!-- Sapper generates a <style> tag containing critical CSS
 	     for the current page. CSS for the rest of the app is
 	     lazily loaded when it precaches secondary pages -->
-    %sapper.styles%
-    
-    %sapper.head%
+    %sapper.styles% %sapper.head%
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Andika+New+Basic:wght@400;700&family=JetBrains+Mono&display=swap"
       rel="stylesheet"
     />
+
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/monokai-sublime.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
   </head>
   <body>
     <div id="sapper">%sapper.html%</div>
