@@ -6,7 +6,12 @@ const contents = JSON.stringify(
       title: post.title,
       slug: post.slug,
       summary: post.summary,
-      date: post.date.toDateString().split(" ").slice(1).join(" "),
+      date: post.date
+        .toUTCString()
+        .split(",")
+        .slice(1)[0]
+        .split("00")
+        .slice(0, 1),
     };
   })
 );

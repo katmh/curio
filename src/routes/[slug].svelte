@@ -1,15 +1,27 @@
 <script context="module">
-  import {findPost} from './_posts'
-  // sapper calls this to load our data
-  export function preload({ params }) {
+	import { findPost } from "./_posts";
+	// sapper calls this to load our data
+	export function preload({ params }) {
 		// `slug` parameter available b/c this file is [slug].svelte
-    const post = findPost(params.slug)
-    // return a list of props
-    return { post }
-  }
+		const post = findPost(params.slug);
+		// return a list of props
+		return { post };
+	}
 </script>
 
 <script>
+	import { onMount } from "svelte";
+	onMount(async () => {
+		// Load the prismjs first after the page is loaded
+		const prismModule = await import("svelte-prismjs");
+		await import("prismjs/components/prism-c.js");
+		await import("prism-svelte");
+		await import("prismjs/plugins/line-highlight/prism-line-highlight.js");
+		await import("prismjs/plugins/file-highlight/prism-file-highlight.js");
+		// Once everything is loaded load the prismjs module
+		Prism = prismModule.default;
+	});
+
 	export let post;
 </script>
 
@@ -25,14 +37,14 @@
 	.content :global(h2) {
 		font: bold 1.4rem/1 "Andika New Basic", sans-serif;
 		margin-top: 2rem;
-		color: #222;
 	}
 
 	.content :global(pre code) {
 		display: block;
-  	font: normal 0.9rem/150% "Inconsolata", Monaco, monospace;
-		overflow-x: scroll;
-		padding: .75rem 1rem;
+		font: normal 0.9rem/150% "Inconsolata", Monaco, monospace;
+		overflow-x: auto;
+		padding: 0.75rem 1rem;
+		border-radius: 10px;
 	}
 </style>
 
@@ -41,7 +53,9 @@
 </svelte:head>
 
 <h1 class="post_title">{post.title}</h1>
-<p class="date">{post.date}</p>
+<p class="date">
+	{post.date.toUTCString().split(',').slice(1)[0].split('00').slice(0, 1)}
+</p>
 <div class="content">
 	{@html post.html}
 </div>

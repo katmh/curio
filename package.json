@@ -13,7 +13,8 @@
     "compression": "^1.7.1",
     "polka": "next",
     "rollup-plugin-glob": "^1.0.2",
-    "sirv": "^1.0.0"
+    "sirv": "^1.0.0",
+    "svelte-prismjs": "^1.0.1"
   },
   "devDependencies": {
     "sapper": "^0.28.0",
