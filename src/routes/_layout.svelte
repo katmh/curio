@@ -10,13 +10,11 @@
 <footer class="container">
 	<p class="about">
 		<b>About:</b>
-		Hi, I’m Kat and this is where I write casually and (I hope) legibly about
-		programming projects and learnings. I mostly do frontend web development and
-		data visualization. I also take computer science theory and practice courses
-		at MIT, where I’m majoring in comparative media, and I’m participating in
+		Hi, I’m Kat and this is where I write casually about programming, mostly do
+		frontend web development and data visualization. I also take computer
+		science courses at MIT, where I major in media, and I’m participating in
 		<a href="https://recurse.com">Recurse Center</a>
-		in January 2021. I’ve done software-y things for jobs before, but coding
-		first came into my life as a hobby —
+		in January 2021. Coding first came into my life as a hobby —
 		<a href="https://www.katmh.com/girl-in-stem">nurtured</a>
 		by Tumblr,
 		<a href="https://mahacks.com">hackathons</a>, and
