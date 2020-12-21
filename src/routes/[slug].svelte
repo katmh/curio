@@ -10,18 +10,6 @@
 </script>
 
 <script>
-	import { onMount } from "svelte";
-	onMount(async () => {
-		// Load the prismjs first after the page is loaded
-		const prismModule = await import("svelte-prismjs");
-		await import("prismjs/components/prism-c.js");
-		await import("prism-svelte");
-		await import("prismjs/plugins/line-highlight/prism-line-highlight.js");
-		await import("prismjs/plugins/file-highlight/prism-file-highlight.js");
-		// Once everything is loaded load the prismjs module
-		Prism = prismModule.default;
-	});
-
 	export let post;
 </script>
 
@@ -37,14 +25,6 @@
 	.content :global(h2) {
 		font: bold 1.4rem/1 "Andika New Basic", sans-serif;
 		margin-top: 2rem;
-	}
-
-	.content :global(pre code) {
-		display: block;
-		font: normal 0.9rem/150% "Inconsolata", Monaco, monospace;
-		overflow-x: auto;
-		padding: 0.75rem 1rem;
-		border-radius: 10px;
 	}
 </style>
 

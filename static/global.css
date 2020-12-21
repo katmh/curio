@@ -40,6 +40,9 @@ header p {
 a {
   color: inherit;
 }
+p a {
+  color: royalblue;
+}
 
 .post_title,
 .post_title a {
@@ -47,13 +50,25 @@ a {
   font: bold 1.75rem/1 "Andika New Basic", sans-serif;
 }
 
-code {
-  font-family: "JetBrains Mono", monospace;
-  font-size: calc(1em - 2px);
+p code,
+li code {
+  font-size: calc(1em - 3px);
   color: #555;
   background-color: #f0f0f0;
   padding: 0.2em 0.4em;
   border-radius: 2px;
+}
+
+pre {
+  padding: 1.25rem 1.75rem;
+  border-radius: 0.5rem;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+}
+
+code,
+.date {
+  font-family: "Inconsolata", "Monaco", monospace;
 }
 
 .post {
@@ -77,9 +92,8 @@ li {
 }
 
 .date {
-  font-size: 1rem;
-  font-family: "JetBrains Mono", monospace;
-  margin: 0.25rem 0;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
   color: #777;
 }
 
@@ -93,6 +107,8 @@ li {
 }
 
 footer {
+  padding-top: 1.5rem;
+  margin-top: 2rem;
   border-top: 1px solid #aaa;
 }
 
@@ -111,8 +127,8 @@ footer {
   p code,
   li code {
     color: #333;
-    background-color: #bbb;
-    padding: 0.1em 0.3em;
+    background-color: #ccc;
+    padding: 0.1em 0.2em;
   }
   p a,
   li a {

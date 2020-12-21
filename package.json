@@ -10,11 +10,12 @@
   },
   "dependencies": {
     "@jackfranklin/rollup-plugin-markdown": "^0.2.0",
+    "@mheedev/rollup-plugin-markdown": "0.0.6",
     "compression": "^1.7.1",
     "polka": "next",
     "rollup-plugin-glob": "^1.0.2",
     "sirv": "^1.0.0",
-    "svelte-prismjs": "^1.0.1"
+    "svelte-shiki": "0.0.6"
   },
   "devDependencies": {
     "sapper": "^0.28.0",

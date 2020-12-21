@@ -10,7 +10,7 @@
 <footer class="container">
 	<p class="about">
 		<b>About:</b>
-		Hi, I’m Kat and this is where I write casually about programming, mostly do
+		Hi, I’m Kat and this is where I write casually about programming, mostly
 		frontend web development and data visualization. I also take computer
 		science courses at MIT, where I major in media, and I’m participating in
 		<a href="https://recurse.com">Recurse Center</a>
