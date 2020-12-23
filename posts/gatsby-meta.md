@@ -16,8 +16,11 @@ When you're making a website, you can add certain `<meta>` tags to control how s
 
 <!--recommended-->
 <meta property="og:site_name" content="" />
+<meta name="twitter:image" content="" />
 <meta name="twitter:image:alt" content="" />
 ```
+
+(The `twitter:image` tag wasn't mentioned there but I added it since it doesn't make sense to have the `twitter:image:alt` one otherwise. It's also a pretty visually important one.)
 
 When you're using React or a framework that further abstracts on top of React, like Gatsby or Next.js, the code for the `<head>` of a website isn't really exposed to you. As a result, it can initially be tricky to figure out how to add `<meta>` tags.
 
@@ -29,6 +32,20 @@ Nailing the details can be quite subtle at times: getting titles and URLs for di
 
 If you're using Gatsby, like I do in We Are America and Chroma sites, you'll need the plugin `gatsby-plugin-react-helmet`.
 
+We can make a component, which we'll call `<SEO>`. We can design the component to take in props. That way we can import and include it on individual pages to override default values if needed.
+
+It's common to store site metadata in `gatsby-config.js`, and use GraphQL to fetch tha data. Since we're making a query within a component, we need to use Gatsby's `StaticQuery`.
+
+How can we write the `<title>` code? If there's a page title, it should detect that and add it to the site title. For example, if we're on the About page of a website called MySite, we might expect the title, shown in the tab usually, to be `About | MySite` or `MySite - About`.
+
+## Validating your meta tags
+
+Facebook [Sharing Debugger](https://developers.facebook.com/tools/debug/)
+
+Twitter's [card validator](https://cards-dev.twitter.com/validator)
+
+It's inconvenient to push to production or to a branch and wait for your site to deploy and re-propagate every time you make a change. A way to get around that is to use [ngrok](https://ngrok.com), which lets you point a URL to a local server, as this [Stack Overflow answer](https://stackoverflow.com/questions/32950819/twitter-card-validator-on-localhost) recommends. You can then enter that URL into the validators above.
+
 ## How else can you do it?
 
-I mentioned that react-helmet is a common — and as far as I know, standard — solution.
+I mentioned that react-helmet is a common — and as far as I know, standard — solution. How does it work, and how else can you approach this problem?

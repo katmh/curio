@@ -21,7 +21,7 @@
 		<a href="https://hackclub.com">hackathon</a>
 		<a href="https://aspirations.org">communities</a>
 		— and I enjoy approaching it with levity. “Curio” is an imperfect, snappy
-		synonym for “knickknack,” which is what I (unabashedly) consider many of my
+		synonym for “knickknack,” which is what I (unabashedly) consider some of my
 		side
 		<a href="https://katmh.com/projects">projects</a>
 		to be. I hope you find something helpful or insightful on these pages :)
